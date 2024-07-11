@@ -6,7 +6,7 @@
     <title>นายณภัทร ปัญโญ</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800&display=swap" rel="stylesheet">
     <style>
         body {
             background: aqua;
@@ -123,6 +123,15 @@
             margin-left: 20px;
             border-radius: 6px;
         }
+        footer {
+            background: #0300a6;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -177,5 +186,26 @@
             <p>โทรศัพท์: 012-345-6789</p>
         </section>
     </div>
+    <footer>
+        <p>ข้อมูลสถิติผู้เข้าชมเว็บไซต์:</p>
+        <!-- Histats.com (div with counter) -->
+        <div id="histats_counter"></div>
+        <!-- Histats.com START (async) -->
+        <script type="text/javascript">
+            var _Hasync= _Hasync|| [];
+            _Hasync.push(['Histats.start', '1,4881043,4,605,110,55,00000011']);
+            _Hasync.push(['Histats.fasi', '1']);
+            _Hasync.push(['Histats.track_hits', '']);
+            (function() {
+                var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+                hs.src = ('//s10.histats.com/js15_as.js');
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+            })();
+        </script>
+        <noscript>
+            <a href="/" target="_blank">กรุณาเปิดใช้งาน JavaScript เพื่อดูสถิติ</a>
+        </noscript>
+        <!-- Histats.com END -->
+    </footer>
 </body>
 </html>
