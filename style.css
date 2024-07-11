@@ -334,7 +334,7 @@ main {
     font-size: 1.8em;
 }
 .mw-body h1, .mw-body .mw-heading1, .mw-body-content h1, .mw-body-content .mw-heading1, .mw-body-content h2, .mw-body-content .mw-heading2 {
-    font-family: 'Linux Libertine', 'Georgia', 'Times', 'Source Serif Pro', serif;
+  font-family: "Sarabun", sans-serif;
     line-height: 1.375;
 }
 .mw-heading1, h1 {
@@ -476,7 +476,7 @@ p {
     font-size: 1.5em;
 }
 .mw-body h1, .mw-body .mw-heading1, .mw-body-content h1, .mw-body-content .mw-heading1, .mw-body-content h2, .mw-body-content .mw-heading2 {
-    font-family: 'Linux Libertine', 'Georgia', 'Times', 'Source Serif Pro', serif;
+  font-family: "Sarabun", sans-serif;
     line-height: 1.375;
 }
 .mw-heading2:lang(th), .mw-heading2:lang(ne), h2:lang(th), h2:lang(ne) {
@@ -565,8 +565,8 @@ figure {
     font-size: 1.5em;
 }
 .mw-body h1, .mw-body .mw-heading1, .mw-body-content h1, .mw-body-content .mw-heading1, .mw-body-content h2, .mw-body-content .mw-heading2 {
-    font-family: 'Linux Libertine', 'Georgia', 'Times', 'Source Serif Pro', serif;
-    line-height: 1.375;
+
+  font-family: "Sarabun", sans-serif;    line-height: 1.375;
 }
 .mw-heading2:lang(th), .mw-heading2:lang(ne), h2:lang(th), h2:lang(ne) {
     line-height: 1.6;
