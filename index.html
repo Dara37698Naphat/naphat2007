@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="https://i.ibb.co/4S9DcWn/444907321-988930562614665-5144761911088577957-n.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         body {
             background: linear-gradient(135deg, #ff0000, #d60000);
@@ -19,9 +21,10 @@
             margin: 0;
             font-family: "Sarabun", sans-serif;
             height: 100vh;
+            overflow: hidden; /* Prevent scrolling */
         }
         header {
-        	top:0;
+            top: 0;
             position: fixed;
             width: 100%;
             height: 40px;
@@ -49,43 +52,77 @@
             justify-content: center;
             margin-right: 25px;
             transform: translateY(15px);
+            cursor: pointer;
         }
         .image-container img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        .menu-container {
-            margin-top: 50px;
+        .menu {
+            display: none;
+            position: fixed;
+            margin-top: 20px;
+            top: 60px; /* Adjusted to be below the header */
+            right: 20px;
+            width: auto;
+            height: 150px;
+            background: white;
+            border-radius: 10px;
+            padding: 24px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1001;
+            overflow-y: auto;
             display: grid;
-            grid-template-rows: repeat(3, auto);
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
-            width: 40%;
+            overflow-y: auto;
         }
         .menu-item {
             background: white;
             border-radius: 8px;
-            padding: 10px;
+            padding: 20px;
             text-align: center;
             cursor: pointer;
-            width: 100%;
+            width:50%;
+        }
+        .menu-item:hover {
+            background: #f0f0f0;
         }
     </style>
 </head>
-<body>
+<body onclick="hideMenu(event)">
     <header>
         <div class="logo">Naphat Panyo</div>
-        <div class="image-container">
+        <div class="image-container" onclick="toggleMenu(event)">
             <img src="https://i.ibb.co/4S9DcWn/444907321-988930562614665-5144761911088577957-n.jpg" alt="รูปภาพ">
         </div>
     </header>
-    <div class="menu-container">
-        <div class="menu-item">เมนู 1</div>
-        <div class="menu-item">เมนู 2</div>
-        <div class="menu-item">เมนู 3</div>
-        <div class="menu-item">เมนู 4</div>
-        <div class="menu-item">เมนู 5</div>
-        <div class="menu-item">เมนู 6</div>
+    <div class="menu" id="menu">
+        <div class="menu-item"><i class="fa-solid fa-user-group" style="color: red;"></i></div>
+        <div class="menu-item"><i class="fa-solid fa-trophy" style="color: red;"></i></div>
+        <div class="menu-item"><i class="fa-solid fa-comment" style="color: red;"></i></div>
+        <div class="menu-item"><i class="fa-brands fa-tiktok" style="color: red;"></i></div>
+        <div class="menu-item"><i class="fa-brands fa-youtube" style="color: red;"></i></div>
+        <div class="menu-item"><i class="fa-brands fa-discord" style="color: red;"></i></div>
     </div>
+    <script>
+        function toggleMenu(event) {
+            event.stopPropagation(); // Prevent triggering hideMenu
+            const menu = document.getElementById('menu');
+            if (menu.style.display === 'none' || menu.style.display === '') {
+                menu.style.display = 'grid';
+            } else {
+                menu.style.display = 'none';
+            }
+        }
+
+        function hideMenu(event) {
+            const menu = document.getElementById('menu');
+            if (menu.style.display === 'grid' && !menu.contains(event.target)) {
+                menu.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
